@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 2px;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentleShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes solarGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.72;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 1;
+  }
+}
+
+@keyframes sunbeamDrift {
+  0%, 100% {
+    transform: translateX(-6%) translateY(0) scaleX(0.96);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(6%) translateY(-2px) scaleX(1.06);
+    opacity: 0.85;
+  }
+}
+
+@keyframes earthHorizonBreath {
+  0%, 100% {
+    transform: scale(1.02) translateY(0px);
+  }
+  50% {
+    transform: scale(1.06) translateY(-4px);
+  }
+}
+
+@keyframes satelliteOrbit {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1.03);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-1.2deg) scale(1.06);
+  }
+}
+
+@keyframes radioWavePulse {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+.home-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.animate-gentle-shake {
+  animation: gentleShake 0.36s ease-in-out;
+}
+
+.animate-solar-glow {
+  animation: solarGlow 3.6s ease-in-out infinite;
+}
+
+.animate-sunbeam-drift {
+  animation: sunbeamDrift 4.2s ease-in-out infinite;
+}
+
+.animate-earth-drift {
+  animation: earthHorizonBreath 7.5s ease-in-out infinite;
+}
+
+.animate-satellite-orbit {
+  animation: satelliteOrbit 5.2s ease-in-out infinite;
+}
+
+.animate-radio-wave {
+  animation: radioWavePulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-float-slow,
+  .animate-gentle-shake,
+  .animate-solar-glow,
+  .animate-sunbeam-drift,
+  .animate-earth-drift,
+  .animate-satellite-orbit,
+  .animate-radio-wave {
+    animation: none;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}
