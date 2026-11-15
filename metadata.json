@@ -1,0 +1,6 @@
+{
+  "name": "NOURISH-Mars — Space Food & Red Planet Adventures for Kids",
+  "description": "Interactive educational adventure based on NOURISH – MARS: THE LAST HARVEST, featuring Maya and Sathya's story, space nutrition, hydroponics, interactive games, quizzes, 3D Mars exploration, and music.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
